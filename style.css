@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    font-family: Verdana;
+}
+
+.box{
+    width: 200px;
+    height:200px;
+    background-color: orange;
+    border: 3px  solid red;
+    animation-name: walk;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+}
+.ball{
+    width: 100px;
+    animation: ball 5s forwards;
+    animation-direction: alternate;
+    animation-iteration-count:3 ;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes ball {
+    25%{
+        margin-top: 400px;
+        margin-left: 200px;
+    }
+    50%{
+        margin-top: 100px;
+        margin-left: 400px;
+    }
+
+    75%{
+        margin-top: 400px;
+        margin-left: 600px;
+    }
+    100%{
+        margin-top: 150px;
+        margin-left: 800px;
+    }
+}
+
+@keyframes walk {
+    from{ /*dan*/
+        transform:skew(0);
+    }
+    to{/*ga*/
+        transform: skew(80deg);
+    }
+}
+
+
+
+
